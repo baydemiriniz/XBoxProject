@@ -36,7 +36,6 @@ public class GridSystem : MonoBehaviour
             int id = selectButtonInt.Count - 1;
             for (int i = 0; i < id; i++)
             {
-                Debug.Log(selectButtonInt[id]+ "ve"+selectButtonInt[i]);
                 if ((selectButtonInt[id] - 1 == selectButtonInt[i] &&(selectButtonInt[i] % spawnSize!=0)) || 
                     ((selectButtonInt[id] + 1 == selectButtonInt[i] &&(selectButtonInt[id] % spawnSize!=0))||  
                      selectButtonInt[id] - spawnSize == selectButtonInt[i] ||
