@@ -9,7 +9,7 @@ public class SelectButton : MonoBehaviour
 
     public void ButtonSelect()
     {
-        gridSystem.selectButtonInt.Add(id);//id yi liste atıyoruz
-        gridSystem.LevelControl();//Methodu çalıştırıyoruz 
+        gridSystem.selectButtonInt.Add(id);
+        gridSystem.LevelControl();
     }
 }

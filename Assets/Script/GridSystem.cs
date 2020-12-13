@@ -16,12 +16,12 @@ public class GridSystem : MonoBehaviour
         for (int i = 0; i < gridLayout.transform.childCount; i++)
         {
             Destroy(gridLayout.transform.GetChild(i).gameObject);
-        }//DeletedChild
+        }
         spawnSize = Convert.ToInt32(inputText.text);
         float cellSizeWidth = gridLayout.gameObject.GetComponent<RectTransform>().rect.width / spawnSize;
         float cellSizeHeight = gridLayout.gameObject.GetComponent<RectTransform>().rect.height / spawnSize;
         gridLayout.cellSize=new Vector2(cellSizeWidth,cellSizeHeight);
-        for (int i = 0; i <(spawnSize*spawnSize) ; i++)//spawnButton
+        for (int i = 0; i <(spawnSize*spawnSize) ; i++)
         {
             SelectButton id= Instantiate(button, gridLayout.transform);
             id.id = i + 1;
@@ -37,10 +37,10 @@ public class GridSystem : MonoBehaviour
             for (int i = 0; i < id; i++)
             {
                 Debug.Log(selectButtonInt[id]+ "ve"+selectButtonInt[i]);
-                if ((selectButtonInt[id] - 1 == selectButtonInt[i] &&(selectButtonInt[i] % spawnSize!=0)) || //bir eksigi spawn size ye bölünmemesi gerek 
-                    ((selectButtonInt[id] + 1 == selectButtonInt[i] &&(selectButtonInt[id] % spawnSize!=0))|| //bir fazlası var ise  kendisi spawnn size ye bölünmemesi gerek 
-                     selectButtonInt[id] - spawnSize == selectButtonInt[i] ||//spawn size kadar eksiğim varmı ?
-                     selectButtonInt[id] + spawnSize == selectButtonInt[i]))//spawn size kadar fazlam varmı ? 
+                if ((selectButtonInt[id] - 1 == selectButtonInt[i] &&(selectButtonInt[i] % spawnSize!=0)) || 
+                    ((selectButtonInt[id] + 1 == selectButtonInt[i] &&(selectButtonInt[id] % spawnSize!=0))||  
+                     selectButtonInt[id] - spawnSize == selectButtonInt[i] ||
+                     selectButtonInt[id] + spawnSize == selectButtonInt[i]))
                 {
                     for (int s = 0; s < id; s++)
                     {
